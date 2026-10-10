@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dream Catcher Studio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <aside class="panel controls-panel">
+        <div class="brand-row">
+          <div class="orb"></div>
+          <div>
+            <p class="eyebrow">Dream Catcher Studio</p>
+            <h1>Weave your vision</h1>
+          </div>
+        </div>
+
+        <div class="control-group">
+          <label for="styleSelect">Style</label>
+          <select id="styleSelect">
+            <option value="classic">Classic</option>
+            <option value="boho">Boho</option>
+            <option value="celestial">Celestial</option>
+            <option value="forest">Forest</option>
+            <option value="sunrise">Sunrise</option>
+          </select>
+        </div>
+
+        <div class="control-group">
+          <label for="shapeSelect">Shape</label>
+          <select id="shapeSelect">
+            <option value="circle">Circle</option>
+            <option value="oval">Oval</option>
+            <option value="diamond">Diamond</option>
+            <option value="crescent">Crescent</option>
+          </select>
+        </div>
+
+        <div class="control-group">
+          <label for="sizeRange">Size <span id="sizeValue">320</span></label>
+          <input id="sizeRange" type="range" min="220" max="430" step="10" value="320" />
+        </div>
+
+        <div class="control-group">
+          <label for="webRange">Web density <span id="webValue">18</span></label>
+          <input id="webRange" type="range" min="8" max="28" step="1" value="18" />
+        </div>
+
+        <div class="control-group">
+          <label for="featherRange">Feather count <span id="featherValue">6</span></label>
+          <input id="featherRange" type="range" min="3" max="12" step="1" value="6" />
+        </div>
+
+        <div class="colors-grid">
+          <div class="color-field">
+            <label for="ringColor">Ring</label>
+            <input id="ringColor" type="color" value="#8b5e3c" />
+          </div>
+          <div class="color-field">
+            <label for="webColor">Web</label>
+            <input id="webColor" type="color" value="#d4a373" />
+          </div>
+          <div class="color-field">
+            <label for="accentColor">Accent</label>
+            <input id="accentColor" type="color" value="#f6d365" />
+          </div>
+          <div class="color-field">
+            <label for="featherColor">Feather</label>
+            <input id="featherColor" type="color" value="#d5d5d5" />
+          </div>
+        </div>
+
+        <div class="control-group checkbox-row">
+          <label class="check-wrap">
+            <input id="glowToggle" type="checkbox" />
+            <span>Glow accents</span>
+          </label>
+        </div>
+
+        <div class="action-row">
+          <button id="randomBtn" class="secondary-btn" type="button">Randomize</button>
+          <button id="downloadBtn" type="button">Download SVG</button>
+        </div>
+      </aside>
+
+      <main class="panel preview-panel">
+        <div class="preview-header">
+          <div>
+            <p class="eyebrow muted">Live preview</p>
+            <h2>Dream catcher</h2>
+          </div>
+          <button id="resetBtn" class="ghost-btn" type="button">Reset</button>
+        </div>
+
+        <div class="canvas-wrap">
+          <svg id="dreamcatcherSvg" viewBox="0 0 500 500" role="img" aria-label="Dream catcher design preview"></svg>
+        </div>
+      </main>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
